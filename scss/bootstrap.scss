@@ -1,13 +1,16 @@
 $font-family-sans-serif: "Poppins", sans-serif;
 
 // Color
-$primary: #0092cc;
-$secondary: #003a52;
-$dark: #000;
+$primary: #009dff;
+$secondary: #052ac2;
+$dark: rgba(0, 0, 0, 0.7);
 $light: #f4f4f4;
 
+$nav-tabs-link-active-color: $primary;
+$nav-tabs-link-color: $dark;
+
 // Buttons
-$button-radius: 0;
+$button-radius: 5px;
 $button-padding-x: 30px;
 $button-padding-y: 12px;
 
@@ -44,4 +47,5 @@ $container-max-widths: (
   xxl: 1000px,
 ) !default;
 
+//nav
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
