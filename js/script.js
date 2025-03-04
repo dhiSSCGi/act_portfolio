@@ -1,3 +1,16 @@
+window.addEventListener("scroll", function () {
+  const div = document.querySelector(".slide-up-div");
+  const divPosition = div.getBoundingClientRect().top; // Get the position of the div relative to the viewport
+  const windowHeight = window.innerHeight; // Get the height of the viewport
+
+  // If the top of the div is within the viewport, make it slide up
+  if (divPosition <= windowHeight) {
+    div.classList.add("visible");
+  } else {
+    div.classList.remove("visible");
+  }
+});
+
 // Add custom JavaScript here
 function runTypingEffect() {
   const texts = ["Web Developer", "Mobile Developer"];
@@ -108,20 +121,20 @@ window.onload = runTypingEffect;
 // });
 
 // Check localStorage for stored theme
-const currentTheme = localStorage.getItem("theme") || "light";
+// const currentTheme = localStorage.getItem("theme") || "light";
 
-// Apply the theme initially
-document.body.classList.add(currentTheme);
+// // Apply the theme initially
+// document.body.classList.add(currentTheme);
 
-// Get the toggle button and add an event listener
-const toggleButton = document.getElementById("modeToggle");
-toggleButton.addEventListener("click", () => {
-  // Toggle the theme
-  document.body.classList.toggle("dark");
-  // Store the theme in localStorage
-  if (document.body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
-});
+// // Get the toggle button and add an event listener
+// const toggleButton = document.getElementById("modeToggle");
+// toggleButton.addEventListener("click", () => {
+//   // Toggle the theme
+//   document.body.classList.toggle("dark");
+//   // Store the theme in localStorage
+//   if (document.body.classList.contains("dark")) {
+//     localStorage.setItem("theme", "dark");
+//   } else {
+//     localStorage.setItem("theme", "light");
+//   }
+// });
